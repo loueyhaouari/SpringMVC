@@ -11,7 +11,7 @@ import java.util.Date;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
-@Autowired(required = true)
+@Autowired
 private PatientRepository patientRepository;
 
 	public static void main(String[] args) {
@@ -20,9 +20,9 @@ private PatientRepository patientRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
-patientRepository.save(new Patient(null,"Mohamed",new Date(),false,34));
-patientRepository.save(new Patient(null,"Hanane",new Date(),false,4321));
-patientRepository.save(new Patient(null,"Imane",new Date(),true,34));
+patientRepository.save(new Patient(null,"Mohamed",new Date(),false,4000));
+patientRepository.save(new Patient(null,"Hanane",new Date(),false,432));
+	patientRepository.save(new Patient(null,"Imane",new Date(),true,340));
 
 	}
 }
